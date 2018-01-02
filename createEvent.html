@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>DØKsocial - Opret event</title>
+</head>
+<body>
+
+<img style="height: 10%; width: 10%; float: left" src="pics/doeklogo.png"/>
+
+<div class="container">
+
+    <div class="row" id="nav-container"></div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="page-header">
+                <h1 style="color: darkblue">Opret event</h1>
+                <div id="load-test"></div>
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regEventName">Event navn</label>
+                <input type="text" class="form-control" id="regEventName" placeholder="Navn på event">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regEventLocation">Event adresse</label>
+                <input type="text" class="form-control" id="regEventLocation" placeholder="Hvorhenne er dette event?">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regEventDate">Dato/tidspunkt</label>
+                <input type="text" class="form-control" id="regEventDate" placeholder="Dato/tidspunkt for event">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regEventPrice">Pris?</label>
+                <input type="text" class="form-control" id="regEventPrice" placeholder="Skal det koste noget?">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regEventDescription">Event beskrivelse</label>
+                <input type="text" class="form-control" id="regEventDescription" placeholder="Event for alle DØKere...">
+            </div>
+            <button type="button" style="margin-bottom: 40px" class="btn btn-primary" id="createEvent-button">Opret begivenhed</button>
+
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">2018 © All rights reserved - DØKSocial</p>
+    </div>
+</footer>
+
+
+
+<script src="lib/js/jquery-3.2.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="js/sdk.js"></script>
+<script src="js/createEvent.js"></script>
+<script>
+    SDK.Student.loadNav();
+</script>
+</body>
+</html>

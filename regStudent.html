@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>DØKSocial - Opret bruger</title>
+</head>
+<body>
+
+<img style="height: 10%; width: 10%; float: left" src="pics/doeklogo.png"/>
+
+<div class="container">
+
+    <div class="row" id="nav-container"></div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="page-header">
+                <h1 style="color: darkblue">Tænk du ikke har oprettet en bruger endnu..</h1>
+                <p>Nå, men så det godt du kan gøre det lynhurtigt her!</p>
+                <div id="load-test"></div>
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regFirstName">Fornavn</label>
+                <input type="text" class="form-control" id="regFirstName" placeholder="Fornavn">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regLastName">Efternavn</label>
+                <input type="text" class="form-control" id="regLastName" placeholder="Efternavn">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regMail">Email</label>
+                <input type="email" class="form-control" id="regMail" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regPassword">Password</label>
+                <input type="password" class="form-control" id="regPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label style="color: darkblue" class="control-label" for="regVerifyPassword">Indtast password igen</label>
+                <input type="password" class="form-control" id="regVerifyPassword" placeholder="Password">
+            </div>
+            <button type="button" style="margin-bottom: 40px" class="btn btn-primary" id="regStudent-button">Opret bruger</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">2018 © All rights reserved - DØKSocial</p>
+        </div>
+    </footer>
+
+</div>
+
+
+    <script src="lib/js/jquery-3.2.1.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <script src="js/sdk.js"></script>
+    <script src="js/regStudent.js"></script>
+    <script>
+        SDK.Student.loadNav();
+    </script>
+</body>
+</html>

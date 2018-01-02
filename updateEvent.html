@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>DØKSocial - Opdater event</title>
+
+</head>
+<body>
+
+<img style="height: 10%; width: 10%; float: left" src="pics/doeklogo.png"/>
+
+<div class="container">
+
+<div class="row" id="nav-container"></div>
+
+    <div class="page-sub-header">
+        <h2 style="color: darkblue">Opdater event</h2>
+    </div>
+
+    <div class="createEvent">
+        <div class="form-group">
+            <label style="color: darkblue" class="control-label" for="updateEventName">Event Navn</label>
+            <input type="text" id="updateEventName" class="form-control" placeholder="Enter name of event">
+        </div>
+        <div class="form-group">
+            <label style="color: darkblue" class="control-label" for="updateLocation">Lokation</label>
+            <input type="text" id="updateLocation" class="form-control" placeholder="Enter location">
+        </div>
+        <div class="form-group">
+            <label style="color: darkblue" class="control-label" for="updateEventDate">Dato</label>
+            <input type="text" id="updateEventDate" class="form-control" placeholder="Enter date of event">
+        </div>
+        <div class="form-group">
+            <label style="color: darkblue" class="control-label" for="updateDescription">Beskrivelse</label>
+            <input type="text" id="updateDescription" class="form-control" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+            <label style="color: darkblue" class="control-label" for="updatePrice">Pris</label>
+            <input type="number" id="updatePrice" class="form-control" placeholder="Enter price">
+        </div>
+        <button class="btn btn-primary" id="update-event-button">Opdater Event</button>
+    </div>
+</div>
+</br>
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">2018 © All rights reserved - DØKSocial</p>
+    </div>
+</footer>
+
+
+<script src="lib/js/jquery-3.2.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="js/sdk.js"></script>
+<script src="js/updateEvent.js"></script>
+
+</body>
+</html>

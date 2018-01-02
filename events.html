@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>DØKSocial - Events</title>
+
+</head>
+<body>
+
+<img style="height: 10%; width: 10%; float: left" src="pics/doeklogo.png"/>
+
+<div class="row" id="nav-container"></div>
+
+<div class="container">
+
+    <div class="page-sub-header">
+        <h2 style="color: darkblue">Events</h2>
+    </div>
+
+    <table class="table">
+        <thead>
+        <th style="color: darkblue">Event navn</th>
+        <th style="color: darkblue">ID</th>
+        <th style="color: darkblue">Lokation</th>
+        <th style="color: darkblue">Pris</th>
+        <th style="color: darkblue">Dato</th>
+        <th style="color: darkblue">Beskrivelse</th>
+        <th style="color: darkblue" >Deltag</th>
+        <th style="color: darkblue">Deltagere</th>
+        </thead>
+        <tbody id="event-list"></tbody>
+    </table>
+</div>
+
+<div id="participantsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><b>Event deltagere</b></h4>
+            </div>
+            <div class="modal-body" id="goToParticipantsButton">
+                <thead>
+                <th>Navn</th>
+                </thead>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="clearModalText" data-dismiss="modal">Luk</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">2018 © All rights reserved - DØKSocial</p>
+    </div>
+</footer>
+
+
+<script src="lib/js/jquery-3.2.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="js/sdk.js"></script>
+<script src="js/events.js"></script>
+
+</body>
+</html>
