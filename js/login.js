@@ -4,8 +4,8 @@ $(document).ready(() => {
 
   $("#login-button").click(() => {
 
-    const email = $("#inputEmail").val();
-    const password = $("#inputPassword").val();
+    const studentemail = $("#inputEmail").val();
+    const studentpassword = $("#inputPassword").val();
 
     SDK.User.login(email, password, (err, data) => {
       if (err && err.xhr.status === 401) {
