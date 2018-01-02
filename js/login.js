@@ -12,9 +12,9 @@ $(document).ready(() => {
         $(".form-group").addClass("has-error");
       }
       else if (err){
-        console.log("BAd stuff happened")
+        console.log("Der gik noget galt - prøv venligst igen")
       } else {
-        window.location.href = "my-page.html";
+        window.location.href = "index.html";
       }
     });
 

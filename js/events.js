@@ -3,7 +3,7 @@ $(document).ready(() => {
     SDK.Student.loadNav();
 
 const $eventOverview = $("#event-overview");
-const $attendingStudents = $("#attending-students");
+const $attendingStudentsButton = $("#attending-students");
 
 SDK.Event.getEvents((cb, events) => {
     events = JSON.parse(events);
@@ -18,7 +18,7 @@ SDK.Event.getEvents((cb, events) => {
                     <td>${event.eventDate}</td>
                     <td>${event.description}</td>
                     <td><button type="button" id="attendButton" class="btn btn-success attendButton" data-event-id="${event.idEvent}">Deltag i event</button></td>
-                    <td><button type="button" class="btn btn-success attendingStudents" data-event-id="${event.idEvent}"
+                    <td><button type="button" class="btn btn-success attendingStudentsButton" data-event-id="${event.idEvent}"
                     data-toggle="modal" data-target="#participantsModal">Se deltagere</button></td>
                 </tr>
                 `;
@@ -35,15 +35,15 @@ $(".attendButton").click(function() {
         $(".form-group").addClass("has-error")
 
     } else if (err) {
-        console.log("An error happened");
-        window.alert("Something happened - Try to attend the event again")
+        console.log("Der er gået noget galt");
+        window.alert("Prøv at deltag i event igen")
     } else {
-        window.location.href ="attendingEvents.html";
+        window.location.href ="myAttendingEvents.html";
     }
 })
 });
 
-$(".goToParticipantsButton").click(function() {
+$(".attendingStudentsButton").click(function() {
     var idEvent = $(this).data("event-id");
 
     console.log(idEvent);
@@ -61,15 +61,15 @@ $(".goToParticipantsButton").click(function() {
                             
                     `;
 
-            $goToParticipantsButton.append(studentsHtml)
+            $attendingStudentsButton.append(studentsHtml)
         });
         } else {
-            $("#goToParticipantsButton").html("Something happened, try again");
+            $("#attendingStudentsButton").html("Der gik noget galt, prøv venligst igen");
 }
 });
 });
 });
 $("#clearModalText").click(function () {
-    $("#goToParticipantsButton").html("");
+    $("#attendingStudentsButton").html("");
 });
 });
