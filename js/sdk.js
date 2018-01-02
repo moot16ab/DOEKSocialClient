@@ -1,31 +1,28 @@
 const SDK = {
-  serverURL: "http://dis-bookstore.herokuapp.com/api",
+  serverURL: "localhost:8080/api",
   request: (options, cb) => {
 
-    let headers = {};
-    if (options.headers) {
-      Object.keys(options.headers).forEach((h) => {
-        headers[h] = (typeof options.headers[h] === 'object') ? JSON.stringify(options.headers[h]) : options.headers[h];
-      });
-    }
+      let token = {
+          "Authorization": SDK.Storage.load("token")
+      };
 
-    $.ajax({
-      url: SDK.serverURL + options.url,
-      method: options.method,
-      headers: headers,
-      contentType: "application/json",
-      dataType: "json",
-      data: JSON.stringify(options.data),
-      success: (data, status, xhr) => {
-        cb(null, data, status, xhr);
-      },
-      error: (xhr, status, errorThrown) => {
-        cb({xhr: xhr, status: status, error: errorThrown});
-      }
-    });
+      $.ajax({
+          url: SDK.serverURL + options.url,
+          method: options.method,
+          headers: token,
+          contentType: "application/json",
+          dataType: "json",
+          data: JSON.stringify(SDK.Encryption.encrypt(JSON.stringify(options.data))),
+          success: (data, status, xhr) => {
+              cb(null, SDK.Encryption.decrypt(data), status, xhr);
+          },
+          error: (xhr, status, errorThrown) => {
+              cb({xhr: xhr, status: status, error: errorThrown});
+          }
+      });
 
   },
-  User: {
+  Student: {
     findAll: (cb) => {
       SDK.request({method: "GET", url: "/staffs"}, cb);
     },
