@@ -4,11 +4,11 @@ $(document).ready(() => {
 
     $("#update-myevent-button").click(() => {
 
-        const eventName = $("#updateEventName").val();
-        const location = $("#updateLocation").val();
-        const eventDate = $("#updateEventDate").val();
-        const description = $("#updateDescription").val();
-        const price = $("#updatePrice").val();
+        const regEventName = $("#updateEventName").val();
+        const regLocation = $("#updateLocation").val();
+        const regEventDate = $("#updateEventDate").val();
+        const regDescription = $("#updateDescription").val();
+        const regPrice = $("#pdatePrice").val();
         const idEvent = SDK.Link.getParameterByName("eventId");
 
         SDK.Event.updateEvent(eventName, location, eventDate, description, price, idEvent, (err, data) => {
