@@ -1,10 +1,10 @@
 $(document).ready(() => {
 
-    SDK.User.loadNav();
+    SDK.Student.loadNav();
 
     const $myAttendingEventList = $("#myAttending-event-list");
 
-    SDK.User.getMyAttendingEvents((cb, events) => {
+    SDK.Student.getMyAttendingEvents((cb, events) => {
 
         events = JSON.parse(events);
         events.forEach(event => {

@@ -1,13 +1,13 @@
 $(document).ready(() => {
 
-  SDK.User.loadNav();
+  SDK.Student.loadNav();
 
   $("#login-button").click(() => {
 
     const studentemail = $("#inputEmail").val();
     const studentpassword = $("#inputPassword").val();
 
-    SDK.User.login(email, password, (err, data) => {
+    SDK.Student.login(studentemail, studentpassword, (err, data) => {
       if (err && err.xhr.status === 401) {
         $(".form-group").addClass("has-error");
       }
