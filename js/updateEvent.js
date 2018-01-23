@@ -1,3 +1,9 @@
+/* Denne klasse understøtter updateEvent.html og sørger for, at en bruger kan
+ * opdatere sin egen begivenhed.
+ * Den er udviklet med udgangspunkt i Jesper Bruun Hansen og Morten Dalgaard Laursens repo fra øvelsestimerne:
+ * https://github.com/Distribuerede-Systemer-2017/javascript-client/
+ */
+
 $(document).ready(() => {
 
     SDK.Student.loadNav();

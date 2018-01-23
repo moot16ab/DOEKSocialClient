@@ -1,3 +1,8 @@
+/* Denne klasse står bl.a. for at forbinde klienten til serveren så systemet fungerer.
+ * Den er udviklet med udgangspunkt i Jesper Bruun Hansen og Morten Dalgaard Laursens repo fra øvelsestimerne:
+ * https://github.com/Distribuerede-Systemer-2017/javascript-client/
+*/
+
 const SDK = {
   serverURL: "localhost:8080/api",
   request: (options, cb) => {

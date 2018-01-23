@@ -1,3 +1,8 @@
+/* Denne klasse understøtter login.html og sørger for, at en bruger kan logge ind.
+ * Den er udviklet med udgangspunkt i Jesper Bruun Hansen og Morten Dalgaard Laursens repo fra øvelsestimerne:
+ * https://github.com/Distribuerede-Systemer-2017/javascript-client/
+*/
+
 $(document).ready(() => {
 
   SDK.Student.loadNav();
