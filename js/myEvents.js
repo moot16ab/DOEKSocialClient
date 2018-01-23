@@ -1,7 +1,6 @@
 /* Denne klasse understøtter myEvents.html og sørger for, at en bruger kan
  * se sine oprettede begivenheder
- * Den er udviklet med udgangspunkt i Jesper Bruun Hansen og Morten Dalgaard Laursens repo fra øvelsestimerne:
- * https://github.com/Distribuerede-Systemer-2017/javascript-client/.
+ * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursens.
  */
 
 $(document).ready(() => {
