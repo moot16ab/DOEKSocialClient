@@ -1,6 +1,6 @@
 /* Denne klasse understøtter myEvents.html og sørger for, at en bruger kan
  * se sine oprettede begivenheder
- * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen.
+ * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen
  */
 
 $(document).ready(() => {

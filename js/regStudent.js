@@ -1,6 +1,6 @@
 /* Denne klasse understøtter regStudent.html og sørger for, at en gæst kan
  * oprette en ny bruger.
- * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen.
+ * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen
  */
 
 $(document).ready(() => {

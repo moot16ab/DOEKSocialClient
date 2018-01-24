@@ -1,6 +1,6 @@
  /* Denne klasse understøtter createEvent.html og sørger for, at en bruger kan
  * oprette en begivenhed.
- * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen.
+ * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen
  */
 
 $(document).ready(() => {
