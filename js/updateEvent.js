@@ -1,6 +1,6 @@
 /* Denne klasse understøtter updateEvent.html og sørger for, at en bruger kan
  * opdatere sin egen begivenhed.
- * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursens.
+ * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen.
  */
 
 $(document).ready(() => {

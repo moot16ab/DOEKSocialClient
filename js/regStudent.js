@@ -1,6 +1,6 @@
 /* Denne klasse understøtter regStudent.html og sørger for, at en gæst kan
  * oprette en ny bruger.
- * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursens.
+ * Den er udviklet med hjælp fra Jesper Bruun Hansen og Morten Dalgaard Laursen.
  */
 
 $(document).ready(() => {
@@ -27,19 +27,18 @@ $(document).ready(() => {
                     SDK.Student.register(studentfirstName, studentlastName, studentemail, studentpassword, verifyPassword, (err, data) => {
                         if (err && err.xhr.status === 400) {
                             $(".form-group").addClass("has-error");
-            }
+                        }
 
-            SDK.Student.register(studentfirstName, studentlastName, studentemail, studentpassword, verifyPassword, (err, data) => {
-                if (err && err.xhr.status === 401) {
-                    $(".form-group").addClass("has-error");
+                        SDK.Student.register(studentfirstName, studentlastName, studentemail, studentpassword, verifyPassword, (err, data) => {
+                            if (err && err.xhr.status === 401) {
+                                $(".form-group").addClass("has-error");
+                            }
+                            else if (err) {
+                                console.log("Der gik noget galt - prøv venligst igen.")
+                            } else {
+                                window.alert("Du kan nu logge ind med din oprettede bruger.");
+                                window.location.href = "login.html";
+                            }
+                        });
+                    });
                 }
-                else if (err) {
-                    console.log("Der gik noget galt - prøv venligst igen.")
-                } else {
-                    window.alert("Du kan nu logge ind med din oprettede bruger.");
-                    window.location.href = "login.html";
-                }
-            });
-        }
-    });
-});
