@@ -10,7 +10,7 @@ const SDK = {
       let token = {
           "Authorization": SDK.Storage.load("token")
       };
-
+    /* Her sætter jeg mit asynkrone kald til serveren op */
       $.ajax({
           url: SDK.serverURL + options.url,
           method: options.method,
@@ -287,7 +287,9 @@ const SDK = {
 
     },
 
-//Iben
+ /* Oprettet med hjælp fra Albert Molina Leon: https://github.com/MolinaLeon/D-Ksocial/blob/master/js/sdk.js
+  * skulle meget gerne få min updateEvent til at virke
+  */
     Url: {
         getParameterByName: (name) => {
             var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
